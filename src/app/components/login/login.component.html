@@ -1,0 +1,11 @@
+@if(!(isLoggedIn | async)){
+    <button (click)="login()">Login</button>
+}
+
+@if (isLoggedIn | async) {
+    <button (click)="logout()">Logout</button>
+}
+
+<br>
+<br>
+<a [routerLink]="['/home']">Go to Home</a>
